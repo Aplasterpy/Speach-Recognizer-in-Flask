@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Speach Recognizer</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static', filename= 'styles/index.css')}}">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+
+</head>
+<body>
+    <div id="speeechContainer">
+        <h1>Upload file</h1>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file"/> <br><br>
+            <input type="submit" id="SubmitButton" value="Translate"/>
+        </form>
+        {% if transcript!= "" %}
+        <div id="speechtranslatecontainer">
+            <h1>Translate</h1>
+            <p id="speechtext">{{transcript}}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+h1, p, input{
+    font-family:sans-serif;
+}
+
+#submitButton{
+    background-color: aqua;
+    color: bisque;
+    border-radius: 5px;
+    border:  none;
+    padding: 10px, 30px;
+}
+#submitButton:hover{
+    cursor: pointer;
+}
